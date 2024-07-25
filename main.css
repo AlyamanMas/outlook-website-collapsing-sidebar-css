@@ -1,3 +1,4 @@
+@-moz-document domain("outlook.office.com") {
 /* Hide labels default */
 .u0T8k:not(._Ptr3) {
     display: none;
@@ -68,7 +69,7 @@
     z-index: 33;
 }
 /* Since our sidebar is absolute, it doesn't take up space, but we need it to take up space so two elements do not collide. We fix this here */
-#MailList {
+div[id="Skip to message list-region"] {
     margin-left: 50px;
 }
 /* Move this margin to its child's padding. See above. */
@@ -79,4 +80,5 @@
 /* Hide 'Add Favorites' button */
 .Yd48r div[data-folder-name="add favorite"] {
     display: none;
+}
 }
