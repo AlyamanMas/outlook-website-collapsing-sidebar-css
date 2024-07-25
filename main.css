@@ -1,0 +1,74 @@
+/* Hide labels default */
+.u0T8k:not(._Ptr3) {
+    display: none;
+    color: #141414;
+}
+
+/* Do not ellipsize the top-level labels "Favorites" and "Folders"*/
+._Ptr3 {
+    text-overflow: "";
+}
+
+/* Unindent nested sections when collapsed */
+.Yd48r div[aria-level="3"] {
+    padding-left: 0px !important;
+    transition: padding-left 0.3s;
+}
+/* Fix indentation on Inbox and Trash not matching rest of itmes */
+.SuSxc.LPIso.cqDRB {
+    padding-left: 6px;
+}
+
+.SuSxc.LPIso {
+    padding-left: 8px;
+}
+
+/* Remove left padding of all items in the sidebar */
+.YYA9V {
+    padding-left: 0;
+}
+/* Minimize padding on the right of the sidebar */
+#folderPaneDroppableContainer {
+    padding-right: 7px;
+}
+
+/* .Yd48r is the top level class for the sidebar, with only 1 element.
+    Use it to show labels when hovered over */
+.Yd48r:hover .u0T8k,
+.Yd48dr:hover .Haof5 {
+    display: block !important;
+    color: white;
+}
+/* Reindent nested folders when expanding */
+.Yd48r:hover div[aria-level="3"] {
+    padding-left: 8px !important;
+    transition: padding-left 0.3s ease 0.3s;
+}
+.Yd48r:hover {
+    width: 260px !important;
+    transition: width 0.3s ease 0.3s;
+}
+
+/* Hide expand/collapse downwards arrows in sidebar. */
+.Yd48r i[data-icon-name="ChevronDownRegular"] {
+    display: none;
+}
+
+/* Default top-level sidebar */
+.Yd48r {
+    width: 44px !important;
+    transition: width 0.3s;
+    overflow: hidden;
+    /* Hide labels when collapsed */
+    padding-left: 7px;
+    /* move padding from fater element to this one to make hovering over left border work */
+}
+/* Move this margin to its child's padding. See above. */
+.LBktY {
+    margin: 0px !important;
+}
+
+/* Hide 'Add Favorites' button */
+.Yd48r div[data-folder-name="add favorite"] {
+    display: none;
+}
