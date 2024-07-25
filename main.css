@@ -25,7 +25,7 @@
 
 /* Remove left padding of all items in the sidebar */
 .YYA9V {
-    padding-left: 0;
+    padding-left: 7px;
 }
 /* Minimize padding on the right of the sidebar */
 #folderPaneDroppableContainer {
@@ -56,12 +56,20 @@
 
 /* Default top-level sidebar */
 .Yd48r {
-    width: 44px !important;
-    transition: width 0.3s;
-    overflow: hidden;
+    width: 50px !important;
+    height: 84%;
+    transition: width 0.15s ease;
     /* Hide labels when collapsed */
-    padding-left: 7px;
+    overflow: hidden;
     /* move padding from fater element to this one to make hovering over left border work */
+    /* padding-left: 7px; */
+    /* Make it not push other elements when expanding */
+    position: absolute;
+    z-index: 33;
+}
+/* Since our sidebar is absolute, it doesn't take up space, but we need it to take up space so two elements do not collide. We fix this here */
+#MailList {
+    margin-left: 50px;
 }
 /* Move this margin to its child's padding. See above. */
 .LBktY {
